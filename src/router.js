@@ -6,10 +6,9 @@ import ConcertPage from './views/ConcertPage.vue'
 import HistoryPage from './views/HistoryPage.vue'
 
 export default createRouter({
-    // История переходов сохраняется
     history: createWebHistory(),
 
-    // Роуты и компоненты
+
     routes: [
         {
             name: "main",
