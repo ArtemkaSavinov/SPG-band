@@ -1,13 +1,14 @@
 import { createRouter, createWebHistory } from "vue-router";
-import MainPage from './views/MainPage.vue'
-import LibraryPage from './views/LibraryPage.vue'
-import BandsPage from './views/BandsPage.vue'
-import ConcertPage from './views/ConcertPage.vue'
-import HistoryPage from './views/HistoryPage.vue'
+import MainPage from "./views/MainPage.vue";
+import LibraryPage from "./views/LibraryPage.vue";
+import BandsPage from "./views/BandsPage.vue";
+import ConcertPage from "./views/ConcertPage.vue";
+import HistoryPage from "./views/HistoryPage.vue";
+import BandPage from "./views/BandPage.vue";
+
 
 export default createRouter({
     history: createWebHistory(),
-
 
     routes: [
         {
@@ -34,6 +35,11 @@ export default createRouter({
             name: "history",
             path: "/history",
             component: HistoryPage,
+        },
+        {
+            name: "band",
+            path: "/band/:classNumber",
+            component: BandPage,
         }
     ],
 });

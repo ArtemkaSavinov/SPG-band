@@ -27,7 +27,7 @@ export default {
             <div class="row">
                 <a class="col-lg-6 col-md-6 col-xs-12 main-lib__card" v-for="(item, index) in library">
                     <div class="main-lib__concert">
-                        <h2 class="main-lib__name-concert">{{item.name}}"</h2>
+                        <h2 class="main-lib__name-concert">{{item.name}}</h2>
                         <p class="main-lib__concert-date">{{item.date}}</p>
                     </div>
                 </a>

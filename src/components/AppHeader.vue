@@ -44,7 +44,7 @@
         <div class="header__container">
             <div class="header__logo" @click="goMain">
                 <a class="header__link"
-                    ><img src="src/assets/icons/logo.png" width="68" height="87"
+                    ><img src="/src/assets/icons/logo.png" width="68" height="87"
                 /></a>
             </div>
             <nav class="header__menu">
