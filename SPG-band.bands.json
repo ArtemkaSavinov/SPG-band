@@ -1,0 +1,42 @@
+[{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad05"
+  },
+  "name": "7 параллель",
+  "image": "sem.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad06"
+  },
+  "name": "8 параллель",
+  "image": "vos.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad07"
+  },
+  "name": "9 параллель",
+  "image": "dev.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad08"
+  },
+  "name": "10 параллель",
+  "image": "des.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad09"
+  },
+  "name": "11 параллель",
+  "image": "odi.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b51aab225786f40a88ad0a"
+  },
+  "name": "Руководство",
+  "image": "DM.jpg"
+}]

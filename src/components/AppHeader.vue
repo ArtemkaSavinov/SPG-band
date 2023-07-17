@@ -1,11 +1,5 @@
 <script>
     export default {
-        data() {
-            return {
-
-            }
-        },
-
         mounted() {
             console.log(this.$route.name)
             console.log(this.$route)

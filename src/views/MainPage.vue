@@ -1,31 +1,26 @@
 <script>
-    export default {
-        data() {
+import axios from 'axios';
+export default {
 
-        },
-
-        watch: {
-            
-        }
-    }
+}
 </script>
 
 <template>
     <main class="main">
-            <h2 class="title">Внимание!</h2>
-            <p class="main__text">
-                Итак, данный сайт был сделан, чтоб рассказать вам о нашем
-                коллективе. Участники могут скидывать нам информацию, которую мы
-                будем размещать на сайте <br />
-                Надеемся вам понравится (:
-            </p>
-            <div class="main__news">
-                <h2>Следующий концерт будет в мае!</h2>
-            </div>
-            <div class="main__logo-container">
-                <img class="main__logo" src="src/assets/icons/logo.jpg" />
-            </div>
-        </main>
+        <h2 class="title">Внимание!</h2>
+        <p class="main__text">
+            Итак, данный сайт был сделан, чтоб рассказать вам о нашем
+            коллективе. Участники могут скидывать нам информацию, которую мы
+            будем размещать на сайте <br />
+            Надеемся вам понравится (:
+        </p>
+        <div class="main__news">
+            <h2>Следующий концерт будет в мае!</h2>
+        </div>
+        <div class="main__logo-container">
+            <img class="main__logo" src="src/assets/icons/logo.jpg" />
+        </div>
+    </main>
 </template>
 
 <style lang="sass">

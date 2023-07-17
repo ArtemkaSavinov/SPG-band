@@ -1,0 +1,324 @@
+[{
+  "_id": {
+    "$oid": "64b45a887417750dfb4479b9"
+  },
+  "name": "Алексей Буров",
+  "instrument": "Электро гитара",
+  "class": 7,
+  "image": "burov.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479bb"
+  },
+  "name": "Михаил Туров",
+  "instrument": "Акустическая гитара",
+  "class": 7,
+  "image": "turov.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479bc"
+  },
+  "name": "Евдокимов Владимир",
+  "instrument": "Фортепиано",
+  "class": 7,
+  "image": "evdokimov.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479bd"
+  },
+  "name": "Максимов Дмитрий",
+  "instrument": "Бас-гитара",
+  "class": 7,
+  "image": "dimon.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479be"
+  },
+  "name": "Николаева Мирослава",
+  "instrument": "Бонги",
+  "class": 7,
+  "image": "miroslava.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479bf"
+  },
+  "name": "Иудина Полина",
+  "instrument": "Укулеле",
+  "class": 7,
+  "image": "iudina.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479c0"
+  },
+  "name": "Василиса Никифорова",
+  "instrument": "вокал",
+  "class": 7,
+  "image": "ping.png"
+},
+{
+  "_id": {
+    "$oid": "64b45c1a7417750dfb4479c1"
+  },
+  "name": "Гладышева Анастасия",
+  "instrument": "Вокал",
+  "class": 7,
+  "image": "gladisheva.png"
+},
+{
+  "_id": {
+    "$oid": "64b45cd37417750dfb4479c3"
+  },
+  "name": "Елизавета Антонова",
+  "instrument": "Бас-гитара",
+  "class": 8,
+  "image": "antonova.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45cd37417750dfb4479c4"
+  },
+  "name": "Ярослав Андреев",
+  "instrument": "Барабаны",
+  "class": 8,
+  "image": "andreev.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45cd37417750dfb4479c5"
+  },
+  "name": "Зелова Софья",
+  "instrument": "Фортепиано",
+  "class": 8,
+  "image": "zelova.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45cd37417750dfb4479c6"
+  },
+  "name": "Лучкова Арина",
+  "instrument": "Вокал",
+  "class": 8,
+  "image": "luchkova.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45cd37417750dfb4479c7"
+  },
+  "name": "Белкин Артём",
+  "instrument": "Гитара",
+  "class": 8,
+  "image": "belkin.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479c9"
+  },
+  "name": "Карина Игнатьева",
+  "instrument": "Вокал, Бас-гитара",
+  "class": 9,
+  "image": "karina.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479ca"
+  },
+  "name": "Чаркина Евдокия",
+  "instrument": "Ритм-гитара, Пианино, Перкуссия",
+  "class": 9,
+  "image": "charkina.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479cb"
+  },
+  "name": "Чугунова Полина",
+  "instrument": "Ритм-гитара, Бас-гитара",
+  "class": 9,
+  "image": "Chugunova_30.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479cc"
+  },
+  "name": "Курашов Андрей",
+  "instrument": "Соло-гитара",
+  "class": 9,
+  "image": "kurashov.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479cd"
+  },
+  "name": "Елизавета Антонова",
+  "instrument": "Фортепиано, Перкуссия",
+  "class": 9,
+  "image": "antonova.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479ce"
+  },
+  "name": "Аня Жгутова",
+  "instrument": "Барабаны",
+  "class": 9,
+  "image": "zgutova.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479cf"
+  },
+  "name": "Бабейко Соня",
+  "instrument": "Вокал",
+  "class": 9,
+  "image": "sonya.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479d0"
+  },
+  "name": "Леманская Маша",
+  "instrument": "Вокал+",
+  "class": 9,
+  "image": "leman.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479d1"
+  },
+  "name": "Маша Закржевская",
+  "instrument": "Перкуссия",
+  "class": 9,
+  "image": "negr.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479d2"
+  },
+  "name": "Надежда Канатникова",
+  "instrument": "Барабаны",
+  "class": 9,
+  "image": "nadya.jpg"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479d3"
+  },
+  "name": "Артём Савинов",
+  "instrument": "Соло-гитара",
+  "class": 9,
+  "image": "gay.png"
+},
+{
+  "_id": {
+    "$oid": "64b45f007417750dfb4479d4"
+  },
+  "name": "Константин Попов",
+  "instrument": "ритм-гитара",
+  "class": 9,
+  "image": "ping.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479d6"
+  },
+  "name": "Вероника Боловина",
+  "instrument": "Бас-гитара",
+  "class": 10,
+  "image": "bolovina.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479d7"
+  },
+  "name": "Иванов Андрей",
+  "instrument": "Гитара",
+  "class": 10,
+  "image": "ivanov.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479d8"
+  },
+  "name": "Михаил Исаев",
+  "instrument": "гитара",
+  "class": 10,
+  "image": "isaev.JPG"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479d9"
+  },
+  "name": "Георгий Ануфриев",
+  "instrument": "Фортепиано",
+  "class": 10,
+  "image": "gosha.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479da"
+  },
+  "name": "Елизавета Рузакова",
+  "instrument": "Вокал, скрипка",
+  "class": 10,
+  "image": "ping.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479db"
+  },
+  "name": "Григорий Гогин",
+  "instrument": "Скрипка",
+  "class": 10,
+  "image": "ping.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479dc"
+  },
+  "name": "Настя Полякова",
+  "instrument": "Вокал, мультиинструментал",
+  "class": 10,
+  "image": "pol.PNG"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479dd"
+  },
+  "name": "Полина Шилова",
+  "instrument": "Вокал",
+  "class": 10,
+  "image": "shilo.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479de"
+  },
+  "name": "Варя Ралко",
+  "instrument": "Вокал",
+  "class": 10,
+  "image": "ralko.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479df"
+  },
+  "name": "Арина Мочалина",
+  "instrument": "Вокал",
+  "class": 10,
+  "image": "mochalka.png"
+},
+{
+  "_id": {
+    "$oid": "64b4609c7417750dfb4479e0"
+  },
+  "name": "Михаил Мишуринских",
+  "instrument": "Вокал",
+  "class": 10,
+  "image": "mishurin.png"
+}]

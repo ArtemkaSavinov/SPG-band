@@ -1,9 +1,22 @@
 <script>
+import axios from 'axios';
+
     export default {
         data() {
-            return{
-                
+            return {
+                bands: []
             }
+        },
+
+        methods: {
+            async loadBands() {
+                let response = await axios.get('/bands');
+                this.bands = response.data
+            }
+        },
+
+        mounted() {
+            this.loadBands()
         }
     }
 </script>
@@ -13,63 +26,13 @@
             <h1 class="title">В нашу дружную команду входят следующие коллективы:</h1>
             <div class="container">
                 <div class="row bands__list">
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_7_massive.html">
+                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands">
+                        <a>
                             <div class="bands__photo">
-                                <img src="src/assets/bands/sem.PNG" height="200px" />
+                                <img :src="'src/assets/bands/' +  item.image " height="200px" />
                             </div>
                             <div class="bands__num">
-                                <p>7 параллель</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div  class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_8_massive.html">
-                            <div class="bands__photo">
-                                <img src="src/assets/bands/vos.PNG" height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>8 параллель</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_9_massive.html">
-                            <div class="bands__photo">
-                                <img src="src/assets/bands/dev.PNG" height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>9 параллель</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_10_massive.html">
-                            <div class="bands__photo">
-                                <img src="src/assets/bands/des.PNG" height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>10 параллель</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_11_massive.html">
-                            <div class="bands__photo">
-                                <img src="src/assets/bands/odi.PNG" height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>11 параллель</p>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item">
-                        <a href="bands_0_massive.html">
-                            <div class="bands__photo">
-                                <img src="src/assets/bands/DM.jpg" height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>Руководство</p>
+                                <p>{{item.name}}</p>
                             </div>
                         </a>
                     </div>
