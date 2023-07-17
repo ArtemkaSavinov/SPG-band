@@ -7,7 +7,7 @@ app.listen(port, function () {
 });
 
 let cors = require("cors");
-app.use(cors({ origin: "http://localhost:5174" }));
+app.use(cors({ origin: "http://localhost:5173" }));
 
 app.use(express.json());
 
@@ -61,4 +61,8 @@ app.get('/library', async function (req, res) {
 app.get('/history', async function (req, res) {
     let history = await History.find()
     res.send(history)
+})
+
+app.get('/band', async function (req, res) {
+    
 })
