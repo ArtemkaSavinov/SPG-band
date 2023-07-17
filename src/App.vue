@@ -28,15 +28,15 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
     object-fit: contain
 
 html
-    margin: 5px 10px 0 10px
     font-size: 10px
-    font-family: 'Montserrat Alternates', sans-serif
+    font-family: 'Montserrat', sans-serif
     box-sizing: content-box
     background-color: $white-color
     zoom: 100%
     margin: 0
 
-.title
+.title-second
     text-align: center
     font-size: 3.5rem
+    letter-spacing: 1rem
 </style>

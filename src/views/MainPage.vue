@@ -7,15 +7,13 @@ export default {
 
 <template>
     <main class="main">
-        <h2 class="title">Внимание!</h2>
+        <h2 class="title-second">Ахтунг!</h2>
         <p class="main__text">
-            Итак, данный сайт был сделан, чтоб рассказать вам о нашем
-            коллективе. Участники могут скидывать нам информацию, которую мы
-            будем размещать на сайте <br />
+            Здравствуй, дорогой рокер, ты попал на сайт величайшей в мире музыкальной групппы SPG-Band под предводительством великого и ужасного DM. Здесь ты познакомишься с нашим коллективом, узнаешь наши традиции и посмотришь записи наших самых лучших выступлений!!! <br />
             Надеемся вам понравится (:
         </p>
         <div class="main__news">
-            <h2>Следующий концерт будет в мае!</h2>
+            <h2>Сайт перерабатывается, ждите...</h2>
         </div>
         <div class="main__logo-container">
             <img class="main__logo" src="src/assets/icons/logo.jpg" />
@@ -30,12 +28,10 @@ export default {
     object-fit: contain
 
 .main
-    margin: .5rem
-
     &__text
         font-size: 2rem
         margin: 0 7.5rem 0 7.5rem
-
+        text-indent: 4rem
     &__news
         text-align: center
         padding: 3.5rem 0 5rem 0
