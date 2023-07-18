@@ -68,11 +68,9 @@ $white-color: #F4F4F4
 $white-color-other: #FAFAFA
 $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
 $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
-$header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
 
 .header
     background-color: $white-color-other
-    box-shadow: $header-shadow
     height: 15vh
     &__container
         display: flex
@@ -82,14 +80,13 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
 
     &__logo
         position: relative
-
+        cursor: pointer
     &__menu
         background-color: white
         display: flex
         justify-content: space-around
         align-items: center
         padding: 0
-        margin: .8rem 1rem .8rem 7.5rem
         height: 5rem
         box-shadow: $menu-shadow
 
@@ -104,6 +101,7 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
         letter-spacing: .6rem
         text-align: center
         cursor: pointer
+        transition: .4s
         &:hover
             transform: translateY(.2rem)
 .title
