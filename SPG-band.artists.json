@@ -57,7 +57,7 @@
     "$oid": "64b45c1a7417750dfb4479c0"
   },
   "name": "Василиса Никифорова",
-  "instrument": "вокал",
+  "instrument": "Вокал",
   "class": 7,
   "image": "ping.png"
 },
@@ -183,7 +183,7 @@
     "$oid": "64b45f007417750dfb4479d0"
   },
   "name": "Леманская Маша",
-  "instrument": "Вокал+",
+  "instrument": "Вокал",
   "class": 9,
   "image": "leman.jpg"
 },

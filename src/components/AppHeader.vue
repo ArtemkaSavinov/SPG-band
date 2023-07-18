@@ -1,6 +1,8 @@
 <script>
 export default {
     mounted() {
+        console.log(this.$route.name)
+        console.log(this.$route)
     },
 
     methods: {
@@ -72,13 +74,12 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
     background-color: $white-color-other
     box-shadow: $header-shadow
     height: 15vh
-
     &__container
         display: flex
         height: 100%
         justify-content: center
         align-items: center
-        gap: 4rem
+
     &__logo
         position: relative
 
@@ -88,17 +89,19 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
         justify-content: space-around
         align-items: center
         padding: 0
+        margin: .8rem 1rem .8rem 7.5rem
         height: 5rem
+        box-shadow: $menu-shadow
+
+    &__nav
+        list-style: none
         padding: 0
         margin: 0
-        display: flex
-        gap: 2rem
-        padding: 0 2rem
+
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
         letter-spacing: .6rem
-        font-size: 1.6rem
         text-align: center
         cursor: pointer
         &:hover

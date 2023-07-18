@@ -12,6 +12,15 @@ import axios from 'axios';
             async loadBands() {
                 let response = await axios.get('/bands');
                 this.bands = response.data
+            },
+
+            goBand(classNumber) {
+                this.$router.push({
+                    name: 'band',
+                    params: {
+                        classNumber: classNumber
+                    }
+                })
             }
         },
 
@@ -26,7 +35,7 @@ import axios from 'axios';
             <h1 class="title">В нашу дружную команду входят следующие коллективы:</h1>
             <div class="container">
                 <div class="row bands__list">
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands">
+                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands" @click="goBand(item.classNumber)">
                         <a>
                             <div class="bands__photo">
                                 <img :src="'src/assets/bands/' +  item.image " height="200px" />

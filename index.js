@@ -64,5 +64,7 @@ app.get('/history', async function (req, res) {
 })
 
 app.get('/band', async function (req, res) {
-    
+    let classNumber = req.query.classNumber;
+    let band = await Artist.find({class: classNumber}).sort()
+    res.send(band)
 })
