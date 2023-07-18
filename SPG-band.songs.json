@@ -1,0 +1,40 @@
+[{
+  "_id": {
+    "$oid": "64b708489bdc263cfc68523e"
+  },
+  "name": "Сборник «От винта»",
+  "description": "«От винта» (SPG'band | Прощальная гастроль 14.06.19)",
+  "link": "https://vk.com/video_ext.php?oid=269463115&id=456239420&hash=738e8b1f0f9a4a6c"
+},
+{
+  "_id": {
+    "$oid": "64b708489bdc263cfc68523f"
+  },
+  "name": "Сборник «От винта»",
+  "description": "АД VINTA",
+  "link": "https://vk.com/video_ext.php?oid=269463115&id=456239505&hash=fec0d3a283ec56b0&hd=1"
+},
+{
+  "_id": {
+    "$oid": "64b708489bdc263cfc685240"
+  },
+  "name": "Коллекция старых записей",
+  "description": "Heathens (conf 2018)",
+  "link": "https://vk.com/video_ext.php?oid=-154817403&id=456239028&hash=4767aa7ae35f7961&hd=1"
+},
+{
+  "_id": {
+    "$oid": "64b708489bdc263cfc685241"
+  },
+  "name": "Коллекция старых записей",
+  "description": "We Will Rock U [Queen cover] (Концерт SPG'band 29.11.19)",
+  "link": "https://vk.com/video_ext.php?oid=-154817403&id=456239038&hash=22a3713842ff2f4b&hd=1"
+},
+{
+  "_id": {
+    "$oid": "64b708489bdc263cfc685242"
+  },
+  "name": "Коллекция старых записей",
+  "description": "Точка (conf 2018)",
+  "link": "https://vk.com/video_ext.php?oid=-154817403&id=456239030&hash=8632a2f2946da392&hd=1"
+}]
