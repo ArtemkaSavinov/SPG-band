@@ -26,6 +26,8 @@ export default {
         display: block
         width: 100%
         object-fit: contain
+    body
+        margin: 0
 
     html
         font-size: 10px
@@ -35,6 +37,7 @@ export default {
         zoom: 100%
         margin: 0        
         overflow-x: hidden
+
     //Cumпоненты
     .message-block
         text-align: center
