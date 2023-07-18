@@ -73,9 +73,9 @@ import axios from 'axios';
         &:hover
             border: 8px ridge rgba(243, 242, 242, 0.456)
 
-    & a
+    &  a
         text-decoration: none
-        font-family: 'Montserrat Alternates', sans-serif
+        font-family: 'Montserrat', sans-serif
         text-align: center
         color: black
         font-size: 2rem
