@@ -52,9 +52,9 @@ export default {
                 <a class="header__item" @click="goLibrary">
                     Репертуар
                 </a>
-                <a class="header__item" @click="goConcert">
+                <!-- <a class="header__item" @click="goConcert">
                     Концерты
-                </a>
+                </a> -->
                 <a class="header__item" @click="goHistory">
                     Хроника
                 </a>
@@ -64,23 +64,23 @@ export default {
 </template>
 
 <style lang="sass">
-$white-color: #F4F4F4
+$white-color:v
 $white-color-other: #FAFAFA
 $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
 $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
 
-.header
-    background-color: $white-color-other
-    height: 15vh
+.header    
+    background: white
+    padding: 1.5rem 0
     &__container
         display: flex
         height: 100%
-        justify-content: center
+        justify-content: space-evenly
         align-items: center
-
     &__logo
         position: relative
         cursor: pointer
+        box-shadow: 0px 4px 5px 0px
     &__menu
         background-color: white
         display: flex
@@ -88,22 +88,19 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
         align-items: center
         padding: 0
         height: 5rem
-        box-shadow: $menu-shadow
-
-    &__nav
-        list-style: none
-        padding: 0
-        margin: 0
-
+        gap: 2rem
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
+        font-size: 1.6rem
         letter-spacing: .6rem
         text-align: center
         cursor: pointer
         transition: .4s
         &:hover
-            transform: translateY(.2rem)
+            transform: translateY(.3rem)
+        &:active
+            transform: translateY(0rem)
 .title
     text-align: center
     font-size: 3.5rem

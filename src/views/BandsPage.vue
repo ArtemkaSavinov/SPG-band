@@ -32,11 +32,11 @@ import axios from 'axios';
 
 <template>
 <div class="bands">
-            <h1 class="title">В нашу дружную команду входят следующие коллективы:</h1>
+            <h2 class="title-second">В нашу дружную команду входят следующие коллективы:</h2>
             <div class="container">
                 <div class="row bands__list">
                     <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands" @click="goBand(item.classNumber)">
-                        <a>
+                        <a class="bands__card-band">
                             <div class="bands__photo">
                                 <img :src="'src/assets/bands/' +  item.image " height="200px" />
                             </div>
@@ -63,16 +63,16 @@ import axios from 'axios';
         align-content: flex-start
         align-items: flex-start
         flex-wrap: wrap
-
+        
     &__list-item
-        border: 8px groove rgba(243, 242, 242, 0.456)
-        border-radius: 4px
+        padding: 1rem    
+    &__card-band
         background-color: white
-        margin-bottom: 1.5rem
-        width: auto
-        &:hover
-            border: 8px ridge rgba(243, 242, 242, 0.456)
-
+        border-radius: 1rem
+        width: 100%
+        border: .1rem solid gray
+        &:hover 
+            transform: scale(3)    
     &  a
         text-decoration: none
         font-family: 'Montserrat', sans-serif

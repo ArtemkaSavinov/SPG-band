@@ -8,16 +8,13 @@ export default {
 <template>
     <main class="main">
         <div class="main-first-block">
-            <h2 class="title-second">Ахтунг!</h2>
             <p class="main-first-block__text">
                 Здравствуй, дорогой рокер, ты попал на сайт величайшей в мире музыкальной групппы SPG-Band под
-                предводительством великого и ужасного DM. Здесь ты познакомишься с нашим коллективом, узнаешь наши традиции
-                и посмотришь записи наших самых лучших выступлений!!! <br />
-                Надеемся вам понравится (:
+                предводительством великого и ужасного <b> DM </b>
             </p>
         </div>
 
-        <div class="message-block">
+        <div class="message-block mb-3">
             <h2>Сайт перерабатывается, ждите...</h2>
         </div>
         <div class="main__logo-container">
@@ -33,6 +30,7 @@ export default {
     object-fit: contain
 
 .main
+    z-index: 20
     &__logo-container
         display: flex
         justify-content: center
@@ -41,10 +39,10 @@ export default {
         @include Img
         height: 36rem
         width: 26.9rem
-        box-shadow: -3px 6px 11px 1px rgb(222, 222, 222)
+        box-shadow: 0px 0px 12px 4px rgb(222, 222, 222)
 .main-first-block
     background: url(/src/assets/DM/DM-1.jpg) center / cover no-repeat
-    height: 85vh
+    height: 100vh
     width: 100vw
     position: relative
     &__text

@@ -37,29 +37,33 @@ export default {
         zoom: 100%
         margin: 0        
         overflow-x: hidden
-
+    b
+        font-weight: 800
+        letter-spacing: .6rem
     //Cumпоненты
     .message-block
         text-align: center
         padding: 3.5rem 0 5rem 0
         border-radius: .5rem
-        margin: 3rem 5rem 0 5rem
-        background-color: #181920
+        margin: 2rem 1rem
+        background-color: #353535
         color: white
         box-shadow: 0px 8px 10px 0px #8684a6
         font-size: 2rem
         transition: .5s
         &:hover
-            transform: scale(1.1)
+            transform: scale(1.04)
     .title-second
         margin: 0
         text-align: center
-        font-size: 3.5rem
-        letter-spacing: 1rem
-
+        font-size: 3rem
+        letter-spacing: .6rem
+        font-weight: 500
 
 
     //утилиты
     .text-white
         color: white
+    .mb-3
+        margin-bottom: 3remc
 </style>

@@ -52,7 +52,7 @@ export default {
             </div>
 
         </div>
-        <a class="toBack" @click="goBands"><button class="toBack__btn">К составам</button></a>
+        <a class="toBack" @click="goBands">К составам</a>
     </div>
 </template>
 
@@ -96,7 +96,7 @@ export default {
         font-size: 1.5rem
 
 .toBack
-    border-radius: .6rem
+    border-radius: .5rem
     padding: 1.5rem
     border: 0
     margin-right: 2rem
@@ -106,10 +106,15 @@ export default {
     z-index: 1
     bottom: 0%
     right: 0%
-
+    transition: .5s
+    font-size: 1.5rem
+    font-weight: 600
+    cursor: pointer
     &:hover
-        border-radius: 1rem
-
+        border-radius: 1.5rem
+        transform: scale(1.1)
+    &:active
+        transform: translateY(.3rem)   
     &__btn
         font-family: 'Montserrat Alternates', sans-serif
         cursor: pointer
