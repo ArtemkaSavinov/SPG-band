@@ -1,75 +1,61 @@
 <script>
-    export default {
-        mounted() {
-            console.log(this.$route.name)
-            console.log(this.$route)
+export default {
+    mounted() {
+    },
+
+    methods: {
+        goMain() {
+            this.$router.push({
+                name: 'main'
+            })
         },
 
-        methods: {
-            goMain() {
-                this.$router.push({
-                    name: 'main'
-                })
-            },
+        goLibrary() {
+            this.$router.push({
+                name: 'library',
+            })
+        },
 
-            goLibrary() {
-                this.$router.push({
-                    name: 'library',
-                })
-            },
+        goBands() {
+            this.$router.push({
+                name: 'bands',
+            })
+        },
 
-            goBands() {
-                this.$router.push({
-                    name: 'bands',
-                })
-            },
+        goConcert() {
+            this.$router.push({
+                name: 'concert',
+            })
+        },
 
-            goConcert() {
-                this.$router.push({
-                    name: 'concert',
-                })
-            },
-
-            goHistory() {
-                this.$router.push({
-                    name: 'history',
-                })
-            }
+        goHistory() {
+            this.$router.push({
+                name: 'history',
+            })
         }
     }
+}
 </script>
 
 <template>
     <header class="header">
         <div class="header__container">
             <div class="header__logo" @click="goMain">
-                <a class="header__link"
-                    ><img src="src/assets/icons/logo.png" width="68" height="87"
-                /></a>
+                <a class="header__link"><img src="src/assets/icons/logo.png" width="68" height="87" /></a>
             </div>
             <nav class="header__menu">
-                <ul class="header__nav">
-                    <li class="header__item" @click="goBands">
-                        <a class="header__link">
-                            <button class="header__button">Составы</button>
-                        </a>
-                    </li>
-                    <li class="header__item" @click="goLibrary">
-                        <a class="header__link">
-                            <button class="header__button">Репертуар</button>
-                        </a>
-                    </li>
-                    <li class="header__item" @click="goConcert">
-                        <a class="header__link">
-                            <button class="header__button">Концерты</button>
-                        </a>
-                    </li>
-                    <li class="header__item" @click="goHistory">
-                        <a class="header__link">
-                            <button class="header__button">Хроника</button>
-                        </a>
-                    </li>
-                </ul>
+                <a class="header__item" @click="goBands">
+                    Составы
+                </a>
+                <a class="header__item" @click="goLibrary">
+                    Репертуар
+                </a>
+                <a class="header__item" @click="goConcert">
+                    Концерты
+                </a>
+                <a class="header__item" @click="goHistory">
+                    Хроника
+                </a>
             </nav>
         </div>
     </header>
@@ -83,16 +69,16 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
 $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
 
 .header
-    height: 115px
     background-color: $white-color-other
     box-shadow: $header-shadow
+    height: 15vh
 
     &__container
         display: flex
         height: 100%
         justify-content: center
         align-items: center
-
+        gap: 4rem
     &__logo
         position: relative
 
@@ -102,32 +88,21 @@ $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
         justify-content: space-around
         align-items: center
         padding: 0
-        margin: .8rem 1rem .8rem 7.5rem
         height: 5rem
-        box-shadow: $menu-shadow
-
-    &__nav
-        list-style: none
         padding: 0
         margin: 0
-
+        display: flex
+        gap: 2rem
+        padding: 0 2rem
     &__item
-        display: inline-block
-
-    &__button
-        font-family: 'Montserrat Alternates', sans-serif
-        border: 3px solid white
+        font-family: 'Montserrat', sans-serif
+        font-weight: 600
+        letter-spacing: .6rem
+        font-size: 1.6rem
         text-align: center
         cursor: pointer
         &:hover
-            border: 3px outset #b6b6b6
-
-        &:active
-            box-shadow: $header-button-active-shadow
-    
-    &__link
-        cursor: pointer
-
+            transform: translateY(.2rem)
 .title
     text-align: center
     font-size: 3.5rem
