@@ -17,7 +17,7 @@ export default {
             });
             this.band = response.data;
             
-            this.isLoaded = this.band.length != 0
+            this.isLoaded = this.band.length != 1
         },
 
         goBands() {
@@ -47,7 +47,8 @@ export default {
                     </div>
                     
                 </div>
-                <p v-else>Тут ничего нет, и не я в этом виноват</p>
+                <p class="title" v-else> {{ this.band[0].name }}</p>
+                
             </div>
 
         </div>
