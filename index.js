@@ -33,38 +33,50 @@ let Band = mongoose.model("band", bandsSchema);
 let librarySchema = new mongoose.Schema({
     name: String,
     date: String,
-})
+});
 
-let Library = mongoose.model('library', librarySchema)
+let Library = mongoose.model("library", librarySchema);
 
 let historySchema = new mongoose.Schema({
     history: String,
-    author: String
-})
-
-let History = mongoose.model('histories', historySchema)
-
-app.get("/artists", async function (req, res) {
-
+    author: String,
 });
 
-app.get('/bands', async function (req, res) {
-    let friends = await Band.find()
-    res.send(friends)
-})
+let History = mongoose.model("histories", historySchema);
 
-app.get('/library', async function (req, res) {
-    let library= await Library.find()
-    res.send(library)
-})
+let songSchema = new mongoose.Schema({
+    name: String,
+    description: String,
+    link: String,
+});
 
-app.get('/history', async function (req, res) {
-    let history = await History.find()
-    res.send(history)
-})
+let Song = mongoose.model('song', songSchema)
 
-app.get('/band', async function (req, res) {
+app.get("/artists", async function (req, res) {});
+
+app.get("/bands", async function (req, res) {
+    let friends = await Band.find();
+    res.send(friends);
+});
+
+app.get("/library", async function (req, res) {
+    let library = await Library.find();
+    res.send(library);
+});
+
+app.get("/history", async function (req, res) {
+    let history = await History.find();
+    res.send(history);
+});
+
+app.get("/band", async function (req, res) {
     let classNumber = req.query.classNumber;
-    let band = await Artist.find({class: classNumber}).sort()
-    res.send(band)
+    let band = await Artist.find({ class: classNumber }).sort();
+    res.send(band);
+});
+
+app.get('/song', async function (req, res){
+    let name = req.query.name;
+    let song = await Song.find({name: name})
+    res.send(song)
 })

@@ -11,8 +11,8 @@ export default {
 </script>
 
 <template>
-    <app-header></app-header>
-    <router-view></router-view>
+    <app-header :class="{abs: this.$route.name == 'main'}" class="header"></app-header>
+    <router-view :class="{relative: this.$route.name == 'main'}"></router-view>
 </template>
  
 <style lang="sass">
@@ -21,6 +21,14 @@ export default {
     $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
     $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
     $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
+    	
+    .header
+        z-index: 100
+    
+    .relative
+        position: relative
+    .abs
+        position: absolute
 
     @mixin Img() // Нахуя тебе миксины блять
         display: block

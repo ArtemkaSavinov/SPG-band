@@ -5,6 +5,7 @@ import BandsPage from "./views/BandsPage.vue";
 import ConcertPage from "./views/ConcertPage.vue";
 import HistoryPage from "./views/HistoryPage.vue";
 import BandPage from "./views/BandPage.vue";
+import SongPage from './views/SongPage.vue'
 
 
 export default createRouter({
@@ -40,6 +41,11 @@ export default createRouter({
             name: "band",
             path: "/band/:classNumber",
             component: BandPage,
+        },
+        {
+            name: 'song',
+            path: '/song/:name',
+            component: SongPage
         }
     ],
 });

@@ -43,7 +43,7 @@ export default {
     <header class="header">
         <div class="header__container">
             <div class="header__logo" @click="goMain">
-                <a class="header__link"><img src="src/assets/icons/logo.png" width="68" height="87" /></a>
+                <a class="header__link"><img src="/src/assets/icons/logo.png" width="68" height="87" /></a>
             </div>
             <nav class="header__menu">
                 <a class="header__item" @click="goBands">
@@ -52,9 +52,9 @@ export default {
                 <a class="header__item" @click="goLibrary">
                     Репертуар
                 </a>
-                <!-- <a class="header__item" @click="goConcert">
+                <a class="header__item" @click="goConcert">
                     Концерты
-                </a> -->
+                </a>
                 <a class="header__item" @click="goHistory">
                     Хроника
                 </a>
