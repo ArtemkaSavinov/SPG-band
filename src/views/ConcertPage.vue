@@ -6,7 +6,7 @@ export default {
 
 <template>
 <div class="main_concert">
-        <p class="anons">Следующий концерт будет в конце мая (наверно)</p>
+        <p class="title-third">Наша группа распалась.</p>
 </div>
 </template>
 

@@ -7,13 +7,14 @@ export default {
 
 <template>
     <main class="main">
+        <div class="paralax"></div>
         <div class="main-first-block">
             <p class="main-first-block__text">
                 Здравствуй, дорогой рокер, ты попал на сайт величайшей в мире музыкальной групппы SPG-Band под
                 предводительством великого и ужасного <b> DM </b>
             </p>
         </div>
-
+        <div class="paralax"></div>
         <div class="message-block mb-3">
             <h2>Сайт перерабатывается, ждите...</h2>
         </div>
@@ -30,6 +31,7 @@ export default {
     object-fit: contain
 
 .main
+    height: 100%
     &__logo-container
         display: flex
         justify-content: center
@@ -39,10 +41,17 @@ export default {
         height: 36rem
         width: 26.9rem
         box-shadow: 0px 0px 12px 4px rgb(222, 222, 222)
+.paralax
+    background-image: url(src/assets/DM/DM-1.jpg)
+    background-position: center
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    height: 70vh
 .main-first-block
-    background: url(/src/assets/DM/DM-1.jpg) center / cover no-repeat
-    height: 100vh
-    width: 100vw
+    // background: url(/src/assets/DM/DM-1.jpg) center / cover no-repeat
+    // height: 100vh
+    // width: 100vw
     position: relative
     &__text
         background: rgba(#FFFFFF, .8 )

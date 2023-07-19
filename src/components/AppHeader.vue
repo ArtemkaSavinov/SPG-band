@@ -1,8 +1,6 @@
 <script>
 export default {
     mounted() {
-        console.log(this.$route.name)
-        console.log(this.$route)
     },
 
     methods: {
@@ -72,6 +70,10 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
     background: white
     padding: 1.5rem 0
     animation: down 1s ease-out 0s
+    position: sticky
+    top: 0
+    border-bottom: 2px solid black
+    z-index: 30
     // &__container
     //     display: flex
     //     justify-content: space-evenly
@@ -89,6 +91,7 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
         padding: 0
         height: 5rem
         gap: 2rem
+    
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
@@ -103,12 +106,11 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
             transform: translateY(0rem)
     &__item-active
         font-weight: 800
-        transform: skewY(-3deg) 
+        transform: skewY(-3deg) !important
         text-decoration: underline
-.title
-    text-align: center
-    font-size: 3.5rem
-
+@media (max-width: 425px) 
+    .header__menu
+        flex-direction: column
 @keyframes down
     0%
         opacity: 0

@@ -7,13 +7,26 @@ export default {
     components: {
         AppHeader,
         RouterView
+    },
+    data() {
+        return {
+            ifScroll: false
+        }
+    },
+    mounted() {
+        window.addEventListener('scroll', (event) => this.ifScroll = window.scrollY > 50) //это я спиздил
     }
 }
+
 </script>
 
 <template>
-    <app-header :class="{abs: this.$route.name == 'main'}" class="header"></app-header>
-    <router-view :class="{relative: this.$route.name == 'main'}"></router-view>
+    <app-header :class="{
+        'abs': this.$route.name == 'main',
+        'small-header': ifScroll
+    }" class="header">
+    </app-header>
+    <router-view :class="{ relative: this.$route.name == 'main' }"></router-view>
 </template>
  
 <style lang="sass">
@@ -23,14 +36,17 @@ export default {
     $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
     $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
     	
-    .header
-        z-index: 100
+    // .header
+    //     z-index: 100
     
     // .relative
     //     position: relative
     // .abs
     //     position: absolute
-
+    router-view
+        animation: leftToASS 1s ease-out 0s
+    .header
+        transition: .5s
     @mixin Img() 
         display: block
         width: 100%
@@ -49,11 +65,15 @@ export default {
     b
         font-weight: 800
         letter-spacing: .6rem
+        
+
+    .small-header
+        padding: 0 !important
     //Компоненты
     .message-block
         text-align: center
         padding: 3.5rem 0 5rem 0
-        border-radius: .5rem
+        border-radius: 1rem
         margin: 2rem 1rem
         background-color: #353535
         color: white
@@ -83,4 +103,11 @@ export default {
         color: white
     .mb-3
         margin-bottom: 3remc
+
+    //anus
+    @keyframes leftToASS
+        0%
+            opacity: 0
+        100%
+            opacity: 1
 </style>
