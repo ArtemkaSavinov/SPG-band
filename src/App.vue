@@ -13,20 +13,18 @@ export default {
             ifScroll: false
         }
     },
+
     mounted() {
-        window.addEventListener('scroll', (event) => this.ifScroll = window.scrollY > 50) //это я спиздил
+        window.addEventListener('scroll', () => this.ifScroll = window.scrollY > 50) 
     }
 }
 
 </script>
 
 <template>
-    <app-header :class="{
-        'abs': this.$route.name == 'main',
-        'small-header': ifScroll
-    }" class="header">
+    <app-header :class="{'small-header': ifScroll}" class="header">
     </app-header>
-    <router-view :class="{ relative: this.$route.name == 'main' }"></router-view>
+    <router-view></router-view>
 </template>
  
 <style lang="sass">
@@ -35,14 +33,7 @@ export default {
     $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
     $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
     $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
-    	
-    // .header
-    //     z-index: 100
-    
-    // .relative
-    //     position: relative
-    // .abs
-    //     position: absolute
+
     router-view
         animation: leftToASS 1s ease-out 0s
     .header
@@ -104,7 +95,6 @@ export default {
     .mb-3
         margin-bottom: 3remc
 
-    //anus
     @keyframes leftToASS
         0%
             opacity: 0

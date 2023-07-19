@@ -32,7 +32,7 @@ export default {
             this.$router.push({
                 name: 'history',
             })
-        }
+        },
     }
 }
 </script>
@@ -57,20 +57,41 @@ export default {
                 Хроника
             </a>
         </nav>
-
+        <!-- <a href="#openModal" class="header__button">Вход для админов</a> -->
     </header>
+    <div id="openModal" class="modalWindow">
+        <div>
+            <h2>Будущее модальное окно для авторизации</h2>
+            
+            <a href="#ok" title="Ok" class="modalWindow__link" >Закрыть</a>
+        </div>
+    </div>
 </template>
 
 <style lang="sass">
-$white-color-other: #FAFAFA
-$header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
-$menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
-
+.modalWindow
+    position: fixed
+    top: 50%
+    right: 50%
+    transform: translate(50%, -50%)
+    color: white
+    background-color: black
+    pointer-events: none
+    opacity: 0
+    &__link
+        text-decoration: none
+        color: white
+    & > div
+        width: 50rem
+        padding: 10% 
+    &:target
+        pointer-events: auto
+        opacity: 1
 .header    
     background: white
     padding: 1.5rem 0
     animation: down 1s ease-out 0s
-    position: sticky
+    position: sticky, relative
     top: 0
     border-bottom: 2px solid black
     z-index: 30
@@ -91,7 +112,13 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
         padding: 0
         height: 5rem
         gap: 2rem
-    
+    &__button 
+        position: absolute
+        right: 1%
+        top: 1%
+        text-decoration: none
+        font-family: 'Montserrat', sans-serif
+        color: black
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
