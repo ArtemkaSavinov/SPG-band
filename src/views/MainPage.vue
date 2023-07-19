@@ -18,7 +18,7 @@ export default {
             <h2>Сайт перерабатывается, ждите...</h2>
         </div>
         <div class="main__logo-container">
-            <img class="main__logo" src="src/assets/icons/logo.jpg" />
+            <img class="main__logo" src="src/assets/icons/1211.jpg" />
         </div>
     </main>
 </template>

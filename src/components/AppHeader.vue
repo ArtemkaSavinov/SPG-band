@@ -43,7 +43,7 @@ export default {
     <header class="header">
         <div class="header__container">
             <div class="header__logo" @click="goMain">
-                <a class="header__link"><img src="/src/assets/icons/logo.png" width="68" height="87" /></a>
+                <a class="header__link"><img src="/src/assets/icons/cocker.png" width="100"  /></a>
             </div>
             <nav class="header__menu">
                 <a class="header__item" @click="goBands">
@@ -70,7 +70,7 @@ $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
 $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
 
 .header    
-    background: white
+    // background: white
     padding: 1.5rem 0
     &__container
         display: flex
