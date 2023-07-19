@@ -95,8 +95,8 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
-        font-size: 1.6rem
-        letter-spacing: .6rem
+        font-size: 1.8rem
+        letter-spacing: .5rem
         text-align: center
         cursor: pointer
         transition: .4s
