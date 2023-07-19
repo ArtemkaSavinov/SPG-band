@@ -14,6 +14,8 @@ app.use(express.json());
 let mongoose = require("mongoose");
 mongoose.connect("mongodb://127.0.0.1:27017/SPG-band");
 
+//модели
+
 let artistSchema = new mongoose.Schema({
     name: String,
     instument: String,
@@ -52,6 +54,15 @@ let songSchema = new mongoose.Schema({
 
 let Song = mongoose.model('song', songSchema)
 
+let storySchema = new mongoose.Schema({
+    history: String,
+    text: String
+})
+
+let Story = mongoose.model('story', storySchema)
+// роуты
+
+
 app.get("/artists", async function (req, res) {});
 
 app.get("/bands", async function (req, res) {
@@ -79,4 +90,9 @@ app.get('/song', async function (req, res){
     let name = req.query.name;
     let song = await Song.find({name: name})
     res.send(song)
+})
+app.get('/story', async function (req, res) {
+    let history = req.query.history;
+    let story = await Story.find({history: history})
+    res.send(story)
 })

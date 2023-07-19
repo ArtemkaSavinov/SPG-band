@@ -1,47 +1,43 @@
 <script>
-import axios from 'axios';
+import axios from 'axios'
 export default {
     data() {
         return {
-            histories: []
+            story: [],
+            isLoaded: null
         }
     },
 
     methods: {
-        async loadHistories() {
-            let response = await axios.get('/history');
-            this.histories = response.data
-        },
-
-        goStory(history){
-            this.$router.push({
-                name: 'story',
+        async loadStory() {
+            let response = await axios.get('/story', {
                 params: {
-                    history: history
+                    history: this.$route.params.history
                 }
             })
+            this.story = response.data
+            this.isLoaded = this.story.length != 0
+        },
+
+        goHistory() {
+            this.$router.push({
+                name: 'history',
+            })
         }
-    }, 
+    },
 
     mounted() {
-        this.loadHistories() 
+        this.loadStory()
     }
 }
 </script>
 
 <template>
-    <div class="main-history">
-        <div class="container">
-            <div class="row">
-                <a class="main-history__item" v-for="(item, index) in histories" @click="goStory(item.history)"> 
-                    <div class="main-history__name">
-                        <h2>{{ item.history}}</h2>
-                        <p>{{item.author}}</p>
-                    </div>
-                </a>
-            </div>
-        </div>
+    <div class="main-history" v-for="(item, index) in story" v-if="isLoaded">
+        <p class="text_article">{{ item.text }}</p>
+        <a class="toBack" @click="goHistory"><button class="toBack__btn">К статьям</button></a>
     </div>
+    <p v-else class="title">Данных нет</p>
 </template>
 
 <style lang="sass">
@@ -76,4 +72,9 @@ export default {
             text-align: left
             margin-left: .4rem
             margin-right: .4rem
+
+.text_article
+    margin-left: 10rem
+    margin-right: 10rem 
+    font-size: 1.5rem
 </style>
