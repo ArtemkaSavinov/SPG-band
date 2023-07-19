@@ -42,20 +42,21 @@ export default {
 <template>
     <header class="header">
         <div class="header__container">
-            <div class="header__logo" @click="goMain">
-                <a class="header__link"><img src="/src/assets/icons/logo.png" width="68" height="87" /></a>
-            </div>
+            <!-- <div class="header__logo" @click="goMain">
+                        <a class="header__link"><img src="/src/assets/icons/logo.png" width="68" height="87" /></a>
+                    </div> -->
             <nav class="header__menu">
-                <a class="header__item" @click="goBands">
+                <a class="header__item" @click="goBands" :class="{ 'header__item-active': this.$route.name == 'bands' }">
                     Составы
                 </a>
-                <a class="header__item" @click="goLibrary">
+                <a class="header__item" @click="goLibrary" :class="{ 'header__item-active': this.$route.name == 'library' }">
                     Репертуар
                 </a>
-                <a class="header__item" @click="goConcert">
+                <img @click="goMain" src="../assets/icons/drums.svg" class="header__logo" alt="Логотип нашего коллектива">
+                <a class="header__item" @click="goConcert" :class="{ 'header__item-active': this.$route.name == 'concert' }">
                     Концерты
                 </a>
-                <a class="header__item" @click="goHistory">
+                <a class="header__item" @click="goHistory" :class="{ 'header__item-active': this.$route.name == 'history' }">
                     Хроника
                 </a>
             </nav>
@@ -64,23 +65,22 @@ export default {
 </template>
 
 <style lang="sass">
-$white-color:v
 $white-color-other: #FAFAFA
 $header-shadow: 0px 0px 16px rgba(38, 38, 38, 0.16)
 $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
 
 .header    
     background: white
-    padding: 1.5rem 0
+    animation: down 1s ease-out 0s
     &__container
         display: flex
-        height: 100%
         justify-content: space-evenly
         align-items: center
     &__logo
         position: relative
         cursor: pointer
-        box-shadow: 0px 4px 5px 0px
+        width: 10%
+        height: 80%
     &__menu
         background-color: white
         display: flex
@@ -101,7 +101,19 @@ $menu-shadow: 0px 0px 5px 5px rgba(38, 38, 38, 0.16)
             transform: translateY(.3rem)
         &:active
             transform: translateY(0rem)
+    &__item-active
+        font-weight: 800
+        transform: skewY(-3deg) 
+        text-decoration: underline
 .title
     text-align: center
     font-size: 3.5rem
+
+@keyframes down
+    0%
+        opacity: 0
+        transform: translateY(-5rem)
+    100%
+        opacity: 1
+        transform: translateY(0rem)
 </style>

@@ -11,8 +11,11 @@ export default {
 </script>
 
 <template>
-    <app-header :class="{abs: this.$route.name == 'main'}" class="header"></app-header>
-    <router-view :class="{relative: this.$route.name == 'main'}"></router-view>
+    <app-header></app-header>
+    <router-view></router-view>
+    <!--Твой варик:-->
+    <!-- <app-header :class="{ abs: this.$route.name == 'main' }" class="header"></app-header>
+    <router-view :class="{ relative: this.$route.name == 'main' }"></router-view> -->
 </template>
  
 <style lang="sass">
@@ -23,12 +26,11 @@ export default {
     $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
     	
     .header
-        z-index: 100
     
-    .relative
-        position: relative
-    .abs
-        position: absolute
+    // .relative
+    //     position: relative
+    // .abs
+    //     position: absolute
 
     @mixin Img() // Нахуя тебе миксины блять
         display: block
@@ -57,17 +59,25 @@ export default {
         background-color: #353535
         color: white
         box-shadow: 0px 8px 10px 0px #8684a6
-        font-size: 2rem
         transition: .5s
         &:hover
             transform: scale(1.04)
+        & > h2            
+            font-size: 2.5rem
+            letter-spacing: .4rem
+            font-weight: 500
     .title-second
         margin: 0
         text-align: center
         font-size: 3rem
         letter-spacing: .6rem
         font-weight: 500
-
+    .title-third
+        margin-top: 2rem
+        text-align: center
+        font-size: 2rem
+        letter-spacing: .5rem
+        font-weight: 500
 
     //утилиты
     .text-white

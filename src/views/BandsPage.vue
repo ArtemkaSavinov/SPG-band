@@ -32,7 +32,7 @@ import axios from 'axios';
 
 <template>
 <div class="bands">
-            <h2 class="title-second">В нашу дружную команду входят следующие коллективы:</h2>
+            <h3 class="title-third">В нашу дружную команду входят следующие коллективы:</h3>
             <div class="container">
                 <div class="row bands__list">
                     <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands" @click="goBand(item.classNumber)">
@@ -65,14 +65,17 @@ import axios from 'axios';
         flex-wrap: wrap
         
     &__list-item
-        padding: 1rem    
+        padding: 1rem   
+        display: flex
     &__card-band
         background-color: white
         border-radius: 1rem
         width: 100%
-        border: .1rem solid gray
+        padding: .5rem
+        border: .2rem solid #A5A5A5
+        transition: .5s
         &:hover 
-            transform: scale(3)    
+            transform: scale(1.03)    
     &  a
         text-decoration: none
         font-family: 'Montserrat', sans-serif

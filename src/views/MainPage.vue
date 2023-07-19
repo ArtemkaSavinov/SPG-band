@@ -30,7 +30,6 @@ export default {
     object-fit: contain
 
 .main
-    z-index: 20
     &__logo-container
         display: flex
         justify-content: center
