@@ -6,16 +6,14 @@ import { RouterView } from 'vue-router';
 export default {
     components: {
         AppHeader,
+        RouterView
     }
 }
 </script>
 
 <template>
-    <app-header></app-header>
-    <router-view></router-view>
-    <!--Твой варик:-->
-    <!-- <app-header :class="{ abs: this.$route.name == 'main' }" class="header"></app-header>
-    <router-view :class="{ relative: this.$route.name == 'main' }"></router-view> -->
+    <app-header :class="{abs: this.$route.name == 'main'}" class="header"></app-header>
+    <router-view :class="{relative: this.$route.name == 'main'}"></router-view>
 </template>
  
 <style lang="sass">
@@ -26,13 +24,14 @@ export default {
     $header-button-active-shadow: inset 0px 0px 7px 0px rgb(114 114 114 / 50%)
     	
     .header
+        z-index: 100
     
     // .relative
     //     position: relative
     // .abs
     //     position: absolute
 
-    @mixin Img() // Нахуя тебе миксины блять
+    @mixin Img() 
         display: block
         width: 100%
         object-fit: contain
@@ -50,7 +49,7 @@ export default {
     b
         font-weight: 800
         letter-spacing: .6rem
-    //Cumпоненты
+    //Компоненты
     .message-block
         text-align: center
         padding: 3.5rem 0 5rem 0
