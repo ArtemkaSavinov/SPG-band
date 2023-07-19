@@ -1,12 +1,13 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
-
+import AppFooter from './components/AppFooter.vue'
 import { RouterView } from 'vue-router';
 
 export default {
     components: {
         AppHeader,
-        RouterView
+        RouterView,
+        AppFooter
     },
     data() {
         return {
@@ -24,7 +25,8 @@ export default {
 <template>
     <app-header :class="{'small-header': ifScroll}" class="header">
     </app-header>
-    <router-view></router-view>
+    <router-view :class="{ relative: this.$route.name == 'main' }"></router-view>
+    <AppFooter></AppFooter>
 </template>
  
 <style lang="sass">
@@ -88,12 +90,16 @@ export default {
         font-size: 2rem
         letter-spacing: .5rem
         font-weight: 500
-
+    .title-six
+        font-size: 1.5rem
+        margin: 2rem 0
     //утилиты
     .text-white
         color: white
     .mb-3
-        margin-bottom: 3remc
+        margin-bottom: 3rem
+    .mb-5
+        margin-bottom: 5rem
 
     @keyframes leftToASS
         0%

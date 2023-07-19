@@ -18,9 +18,7 @@ export default {
         <div class="message-block mb-3">
             <h2>Сайт перерабатывается, ждите...</h2>
         </div>
-        <div class="main__logo-container">
-            <img class="main__logo" src="src/assets/icons/1211.jpg" />
-        </div>
+        
     </main>
 </template>
 
@@ -31,16 +29,16 @@ export default {
     object-fit: contain
 
 .main
-    height: 100%
-    &__logo-container
-        display: flex
-        justify-content: center
-        margin-bottom: 5rem
-    &__logo
-        @include Img
-        height: 36rem
-        width: 26.9rem
-        box-shadow: 0px 0px 12px 4px rgb(222, 222, 222)
+    // height: 100%
+    // &__logo-container
+    //     display: flex
+    //     justify-content: center
+    //     margin-bottom: 5rem
+    // &__logo
+    //     @include Img
+    //     height: 36rem
+    //     width: 26.9rem
+        
 .paralax
     background-image: url(src/assets/DM/DM-1.jpg)
     background-position: center

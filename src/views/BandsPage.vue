@@ -57,7 +57,7 @@ import axios from 'axios';
     object-fit: contain
 
 .bands
-    margin-top: 2rem
+    padding-top: 2rem
     &__list
         display: flex
         justify-content: space-around
