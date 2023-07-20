@@ -23,10 +23,10 @@ export default {
 </script>
 
 <template>
-    <app-header :class="{'small-header': ifScroll}" class="header">
+    <app-header :class="{'small-header': ifScroll}" class="header-app">
     </app-header>
     <router-view :class="{ relative: this.$route.name == 'main' }"></router-view>
-    <AppFooter></AppFooter>
+    <app-footer></app-footer>
 </template>
  
 <style lang="sass">
@@ -38,7 +38,7 @@ export default {
 
     router-view
         animation: leftToASS 1s ease-out 0s
-    .header
+    .header-app
         transition: .5s
     @mixin Img() 
         display: block

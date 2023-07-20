@@ -32,7 +32,7 @@ import axios from 'axios';
 
 <template>
 <div class="bands">
-            <h3 class="title-third">В нашу дружную команду входят следующие коллективы:</h3>
+            <h3 class="title-third text-white">В нашу дружную команду входят следующие коллективы:</h3>
             <div class="container">
                 <div class="row bands__list">
                     <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands" @click="goBand(item.classNumber)">
@@ -58,6 +58,7 @@ import axios from 'axios';
 
 .bands
     padding-top: 2rem
+    background: url(/src/assets/icons/gitar.jpg) center / cover no-repeat
     &__list
         display: flex
         justify-content: space-around

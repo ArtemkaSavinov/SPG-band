@@ -59,13 +59,13 @@ export default {
         </nav>
         <!-- <a href="#openModal" class="header__button">Вход для админов</a> -->
     </header>
-    <div id="openModal" class="modalWindow">
+    <!-- <div id="openModal" class="modalWindow">
         <div>
             <h2>Будущее модальное окно для авторизации</h2>
             
             <a href="#ok" title="Ok" class="modalWindow__link" >Закрыть</a>
         </div>
-    </div>
+    </div> -->
 </template>
 
 <style lang="sass">
@@ -91,7 +91,7 @@ export default {
     background: white
     padding: 1.5rem 0
     animation: down 1s ease-out 0s
-    position: sticky, relative
+    position: sticky
     top: 0
     border-bottom: 2px solid black
     z-index: 30
@@ -103,7 +103,7 @@ export default {
         position: relative
         cursor: pointer
         width: 10%
-        height: 80%
+        height: 100%
     &__menu
         background-color: white
         display: flex
@@ -123,7 +123,7 @@ export default {
         font-family: 'Montserrat', sans-serif
         font-weight: 600
         font-size: 1.8rem
-        letter-spacing: .5rem
+        letter-spacing: .2rem
         text-align: center
         cursor: pointer
         transition: .4s
@@ -135,6 +135,7 @@ export default {
         font-weight: 800
         transform: skewY(-3deg) !important
         text-decoration: underline
+        letter-spacing: .5rem
 @media (max-width: 425px) 
     .header__menu
         flex-direction: column
