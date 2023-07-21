@@ -57,7 +57,6 @@ export default {
                 Хроника
             </a>
         </nav>
-        <!-- <a href="#openModal" class="open-modal">Вход для админов</a> -->
     </header>
 </template>
 
@@ -87,6 +86,13 @@ export default {
         padding: 0
         height: 5rem
         gap: 2rem
+        & img
+            transition: .4s
+            &:hover
+                transform: translateY(.3rem)
+            &:active
+                transform: translate(0rem)
+
     &__item
         font-family: 'Montserrat', sans-serif
         font-weight: 600
@@ -114,49 +120,4 @@ export default {
     100%
         opacity: 1
         transform: translateY(0rem)
-
-// модальное окно
-// .modalWindow 
-//     position: fixed
-//     top: 0
-//     right: 0
-//     bottom: 0
-//     left: 0
-//     background: rgba(0,0,0,0.6)
-//     color: white
-//     z-index: 30
-//     opacity:0
-//     pointer-events: none
-//     text-align:center
-//     &__input-group
-//         display: flex
-//         flex-direction: column
-//         gap: 2rem
-//         & input
-//             display: block
-            
-//     &:target 
-//         opacity:1
-//         pointer-events: auto
-//         & body
-//             overflow-y: hidden
-
-//     & > div 
-//         width: 500px
-//         position: relative
-//         margin: 10% auto
-//         background: black
-//         border: .5rem solid white
-//         border-radius: .5rem
-//         & > form
-//             padding: 2rem
-//             margin: auto
-
-// .open-modal
-//     position: absolute
-//     right: 1%
-//     top: 1%
-//     text-decoration: none
-//     font-family: 'Montserrat', sans-serif
-//     color: black
 </style>

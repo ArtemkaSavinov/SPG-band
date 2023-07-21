@@ -13,17 +13,31 @@ export default {
         return {
             ifScroll: false,
             scrollLock: false,
+            login: '',
+            password: '',
         }
     },
 
     methods: {
-        scrollLock() {
+        openModal() {
             this.scrollLock = true
+
+            let modal = document.querySelector('.modalWindow')
+            modal.style.opacity = 1
+            modal.style.pointerEvents = 'auto'
         },
 
-        scrollUnlock() {
+        closeModal() {
             this.scrollLock = false
+
+            let modal = document.querySelector('.modalWindow')
+            modal.style.opacity = 0
+            modal.style.pointerEvents = 'none'
+
+            this.login = ''
+            this.password = ''
         }
+
     },
 
     mounted() {
@@ -35,21 +49,23 @@ export default {
 </script>
 
 <template>
-    <div :class="{scrollLock: this.scrollLock}">
+    <div :class="{ scrollLock: this.scrollLock }">
         <app-header :class="{ 'small-header': ifScroll }" class="header-app"></app-header>
 
-        <!-- <a @click="scrollLock"  class="open-modal">Вход для админов</a> -->
+        <a class="open-modal" @click="openModal">Вход для админов</a>
 
         <div id="openModal" class="modalWindow">
             <div>
                 <form action="">
-                    <h2>Докажи, что админ</h2>
+                    <h2 class="modalWindow__title">Докажи, что админ</h2>
                     <div class="modalWindow__input-group">
-                        <input type="text" placeholder="Логин">
-                        <input type="text" placeholder="Пароль">
+                        <input class="modalWindow__input" type="text" placeholder="Логин" v-model="login">
+                        <input class="modalWindow__input" type="text" placeholder="Пароль" v-model="password">
                     </div>
-                    <button type="submit" preventDefault></button>
-                    <a href="/" title="Ok" class="modalWindow__link" @click="scrollUnlock">Закрыть</a>
+                    <div class="modalWindow__button-group">
+                        <button type="submit" preventDefault class="modalWindow__button">Доказать</button>
+                        <button @click="closeModal" title="Ok" class="modalWindow__button">Закрыть</button>
+                    </div>
                 </form>
             </div>
         </div>
@@ -148,6 +164,9 @@ export default {
     // модальное окно
     .modalWindow 
         position: fixed
+        display: flex
+        justify-content: center
+        align-items: center
         top: 0
         right: 0
         bottom: 0
@@ -157,15 +176,13 @@ export default {
         z-index: 30
         opacity:0
         pointer-events: none
+        &__title
+            margin-top: 0
         &__input-group
             display: flex
             flex-direction: column
             gap: 2rem
-            
-        &:target 
-            opacity:1
-            pointer-events: auto
-
+            margin-bottom: 2rem
         & > div 
             width: 500px
             position: relative
@@ -186,7 +203,4 @@ export default {
         font-family: 'Montserrat', sans-serif
         color: black
         cursor: pointer
-    .scrollLock
-        height: 100vh
-        overflow: hidden
 </style>
