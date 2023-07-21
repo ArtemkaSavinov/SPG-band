@@ -42,7 +42,6 @@ export default {
 
     mounted() {
         window.addEventListener('scroll', () => this.ifScroll = window.scrollY > 50)
-        this.scrollLock
     }
 }
 
