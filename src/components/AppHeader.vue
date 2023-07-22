@@ -58,6 +58,7 @@ export default {
 </template>
 
 <style lang="sass">
+
 .header    
     background: white
     padding: 1.5rem 0
@@ -66,6 +67,7 @@ export default {
     top: 0
     border-bottom: 2px solid black
     z-index: 30
+    opacity: .7
     &__logo
         position: relative
         cursor: pointer

@@ -1,53 +1,55 @@
 <script>
 import axios from 'axios';
 
-    export default {
-        data() {
-            return {
-                bands: []
-            }
-        },
-
-        methods: {
-            async loadBands() {
-                let response = await axios.get('/bands');
-                this.bands = response.data
-            },
-
-            goBand(classNumber) {
-                this.$router.push({
-                    name: 'band',
-                    params: {
-                        classNumber: classNumber
-                    }
-                })
-            }
-        },
-
-        mounted() {
-            this.loadBands()
+export default {
+    data() {
+        return {
+            bands: [],
+            way: 'src/assets/bands/'
         }
+    },
+
+    methods: {
+        async loadBands() {
+            let response = await axios.get('/bands');
+            this.bands = response.data
+        },
+
+        goBand(classNumber) {
+            this.$router.push({
+                name: 'band',
+                params: {
+                    classNumber: classNumber
+                }
+            })
+        }
+    },
+
+    mounted() {
+        this.loadBands()
     }
+}
 </script>
 
 <template>
-<div class="bands">
+    <div class="bands">
+        <div class="paralax-bands"></div>
+        <div class="row bands__list">
             <h3 class="title-third text-white">В нашу дружную команду входят следующие коллективы:</h3>
-            <div class="container">
-                <div class="row bands__list">
-                    <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands" @click="goBand(item.classNumber)">
-                        <a class="bands__card-band">
-                            <div class="bands__photo">
-                                <img :src="'src/assets/bands/' +  item.image " height="200px" />
-                            </div>
-                            <div class="bands__num">
-                                <p>{{item.name}}</p>
-                            </div>
-                        </a>
+            <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands"
+                @click="goBand(item.classNumber)">
+                <a class="bands__card-band">
+                    <div class="bands__photo">
+                        <img :src="'src/assets/bands/' + item.image" height="200px" />
                     </div>
-                </div>
+                    <div class="bands__num">
+                        {{ item.name }}
+                    </div>
+                </a>
             </div>
         </div>
+        <div class="paralax-bands"></div>
+    </div>
 </template>
 
 <style lang="sass">
@@ -55,25 +57,46 @@ import axios from 'axios';
     display: block
     width: 100%
     object-fit: contain
+.paralax-bands
+    background-image: url(/src/assets/icons/gitar.jpg)
+    background-position: center
+    background-attachment: fixed
+    background-size: cover
+    background-repeat: no-repeat
+    height: 10vh
 
+
+    
 .bands
     padding-top: 2rem
-    background: url(/src/assets/icons/gitar.jpg) center / cover no-repeat
     &__list
         display: flex
         justify-content: space-around
         align-content: flex-start
         align-items: flex-start
         flex-wrap: wrap
-        
+        position: relative
+        height: 100vh
+        width: 100%
+        &::before
+            content: ""
+            background-image: url(/src/assets/icons/transparent.png)
+            background-size: cover
+            position: absolute
+            top: 0px
+            right: 0px
+            bottom: 0px
+            left: 0px
+            opacity: 0.1
+    &__num
+        mix-blend-mode: difference
     &__list-item
         padding: 1rem   
         display: flex
     &__card-band
-        background-color: white
         border-radius: 1rem
+        opacity: .9
         width: 100%
-        padding: .5rem
         border: .2rem solid #A5A5A5
         transition: .5s
         &:hover 

@@ -114,6 +114,7 @@ export default {
 
     .small-header
         padding: 0 !important
+        opacity: 0.1
     //Компоненты
     .message-block
         text-align: center

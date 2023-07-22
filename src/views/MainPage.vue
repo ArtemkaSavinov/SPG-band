@@ -34,10 +34,7 @@ export default {
     //     display: flex
     //     justify-content: center
     //     margin-bottom: 5rem
-    // &__logo
-    //     @include Img
-    //     height: 36rem
-    //     width: 26.9rem
+
         
 .paralax
     background-image: url(src/assets/DM/DM-1.jpg)
@@ -47,9 +44,6 @@ export default {
     background-repeat: no-repeat
     height: 70vh
 .main-first-block
-    // background: url(/src/assets/DM/DM-1.jpg) center / cover no-repeat
-    // height: 100vh
-    // width: 100vw
     position: relative
     &__text
         background: rgba(#FFFFFF, .8 )
