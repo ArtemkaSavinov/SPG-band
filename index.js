@@ -96,3 +96,12 @@ app.get('/story', async function (req, res) {
     let story = await Story.find({history: history})
     res.send(story)
 })
+
+app.post('/auth', async function (req, res) {
+    let {login, password} = req.body
+    if (login == 'qwer' && password == '1234') {
+        res.send('success')
+    } else {
+        res.send('fail')
+    }
+})

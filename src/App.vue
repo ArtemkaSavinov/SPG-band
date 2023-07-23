@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import axios from 'axios'
 import { RouterView } from 'vue-router';
 
 export default {
@@ -37,6 +38,26 @@ export default {
 
             this.login = ''
             this.password = ''
+        },
+
+        async auth(evt) {
+            evt.preventDefault()
+
+            let modal = document.querySelector('.modalWindow')
+            modal.style.opacity = 0
+            modal.style.pointerEvents = 'none'
+
+            let response = await axios.post('/auth', {
+                login: this.login,
+                password: this.password
+            })
+            
+            this.$router.push({
+                name: 'admin', 
+                params: {
+                    auth: response.data
+                }
+            })
         }
 
     },
@@ -56,7 +77,7 @@ export default {
 
         <div id="openModal" class="modalWindow">
             <div>
-                <form action="">
+                <form @submit="auth">
                     <h2 class="modalWindow__title">Докажи, что админ</h2>
                     <div class="modalWindow__input-group">
                         <input class="modalWindow__input" type="text" placeholder="Логин" v-model="login">

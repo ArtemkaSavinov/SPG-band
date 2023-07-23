@@ -9,7 +9,7 @@
             <p>- ArtemkaSavinov</p>
             <p>- bobr2306</p>
         </div>
-        <img class="footer__logo" src="src/assets/DM/DM-2.jpg"/>
+        <img class="footer__logo" src="/src/assets/DM/DM-2.jpg"/>
         <div class="footer__first-info">
             <h6 class="title-six">Проекту помогали:</h6>
             <p>- негр1</p>
