@@ -27,7 +27,8 @@ export default {
             modal.style.pointerEvents = 'auto'
         },
 
-        closeModal() {
+        closeModal(evt) {
+            evt.preventDefault()
             this.scrollLock = false
 
             let modal = document.querySelector('.modalWindow')

@@ -34,8 +34,9 @@ export default {
 <template>
     <div class="bands">
         <div class="paralax-bands"></div>
+        <h3 class="title-third">В нашу дружную команду входят следующие коллективы:</h3>
+        <!-- ↑ Тут был class="text-white" я его убрал-->
         <div class="row bands__list">
-            <h3 class="title-third text-white">В нашу дружную команду входят следующие коллективы:</h3>
             <div class="col-lg-4 col-md-6 col-xs-12 bands__list-item" v-for="(item, index) in bands"
                 @click="goBand(item.classNumber)">
                 <a class="bands__card-band">
@@ -78,16 +79,16 @@ export default {
         position: relative
         height: 100vh
         width: 100%
-        &::before
-            content: ""
-            background-image: url(/src/assets/icons/transparent.png)
-            background-size: cover
-            position: absolute
-            top: 0px
-            right: 0px
-            bottom: 0px
-            left: 0px
-            opacity: 0.1
+        // &::before
+        //     content: ""
+        //     background-image: url(/src/assets/icons/transparent.png)
+        //     background-size: cover
+        //     position: absolute
+        //     top: 0px
+        //     right: 0px
+        //     bottom: 0px
+        //     left: 0px
+        //     opacity: 0.1
     &__num
         mix-blend-mode: difference
     &__list-item
