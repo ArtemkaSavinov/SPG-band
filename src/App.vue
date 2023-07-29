@@ -1,6 +1,7 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
 import AppFooter from './components/AppFooter.vue'
+import ModalWindow from './components/ModalWindow.vue';
 import axios from 'axios'
 import { RouterView } from 'vue-router';
 
@@ -8,58 +9,26 @@ export default {
     components: {
         AppHeader,
         RouterView,
-        AppFooter
+        AppFooter,
+        ModalWindow
     },
     data() {
         return {
             ifScroll: false,
             scrollLock: false,
-            login: '',
-            password: '',
+            modalVisible: false,
         }
     },
 
     methods: {
         openModal() {
+            this.modalVisible = true
             this.scrollLock = true
-
-            let modal = document.querySelector('.modalWindow')
-            modal.style.opacity = 1
-            modal.style.pointerEvents = 'auto'
         },
 
-        closeModal(evt) {
-            evt.preventDefault()
+        scrollock() {
             this.scrollLock = false
-
-            let modal = document.querySelector('.modalWindow')
-            modal.style.opacity = 0
-            modal.style.pointerEvents = 'none'
-
-            this.login = ''
-            this.password = ''
         },
-
-        async auth(evt) {
-            evt.preventDefault()
-
-            let modal = document.querySelector('.modalWindow')
-            modal.style.opacity = 0
-            modal.style.pointerEvents = 'none'
-
-            let response = await axios.post('/auth', {
-                login: this.login,
-                password: this.password
-            })
-            
-            this.$router.push({
-                name: 'admin', 
-                params: {
-                    auth: response.data
-                }
-            })
-        }
-
     },
 
     mounted() {
@@ -73,24 +42,8 @@ export default {
     <div :class="{ scrollLock: this.scrollLock }">
         <app-header :class="{ 'small-header': ifScroll }" class="header-app"></app-header>
 
-        <a class="open-modal" @click="openModal">Вход для админов</a>
-
-        <div id="openModal" class="modalWindow">
-            <div>
-                <form @submit="auth">
-                    <h2 class="modalWindow__title">Докажи, что админ</h2>
-                    <div class="modalWindow__input-group">
-                        <input class="modalWindow__input" type="text" placeholder="Логин" v-model="login">
-                        <input class="modalWindow__input" type="text" placeholder="Пароль" v-model="password">
-                    </div>
-                    <div class="modalWindow__button-group">
-                        <button type="submit" preventDefault class="modalWindow__button">Доказать</button>
-                        <button @click="closeModal" title="Ok" class="modalWindow__button">Закрыть</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-
+        <button class="open-modal" @click="openModal">Вход для админов</button>
+        <modal-window v-model:isVisible="modalVisible" @scrollock="scrollock"></modal-window>
         <router-view :class="{ relative: this.$route.name == 'main' }"></router-view>
         <app-footer></app-footer>
     </div>
@@ -181,40 +134,6 @@ export default {
             opacity: 0
         100%
             opacity: 1
-
-            
-    // модальное окно
-    .modalWindow 
-        position: fixed
-        display: flex
-        justify-content: center
-        align-items: center
-        top: 0
-        right: 0
-        bottom: 0
-        left: 0
-        background: rgba(0,0,0,0.6)
-        color: white
-        z-index: 30
-        opacity:0
-        pointer-events: none
-        &__title
-            margin-top: 0
-        &__input-group
-            display: flex
-            flex-direction: column
-            gap: 2rem
-            margin-bottom: 2rem
-        & > div 
-            width: 500px
-            position: relative
-            margin: 10% auto
-            background: black
-            border: .5rem solid white
-            border-radius: .5rem
-            & > form
-                padding: 2rem
-                margin: auto
 
     .open-modal
         position: fixed,
